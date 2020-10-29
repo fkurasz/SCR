@@ -1,0 +1,12 @@
+0 S filip      45108    6952  0  80   0 -   652 do_wai 13:34 pts/1    00:00:00 sh A.sh
+0 S filip      45109   45108  0  80   0 -   652 do_wai 13:34 pts/1    00:00:00 sh B.sh
+0 S filip      45110   45109  0  80   0 -   652 do_wai 13:34 pts/1    00:00:00 sh C.sh
+
+ZABICIE PROCESU B
+0 S filip      47147   46974  0  80   0 -   652 do_wai 13:48 pts/2    00:00:00 sh A.sh
+0 S filip      47148   47147  0  80   0 -   652 do_wai 13:48 pts/2    00:00:00 sh B.sh
+0 S filip      47149   47148  0  80   0 -   652 do_wai 13:48 pts/2    00:00:00 sh C.sh
+
+0 S filip      47147   46974  0  80   0 -   652 do_wai 13:48 pts/2    00:00:00 sh A.sh
+0 S filip      47149    1803  0  80   0 -   652 do_wai 13:48 pts/2    00:00:00 sh C.sh
+

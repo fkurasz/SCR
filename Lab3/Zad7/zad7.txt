@@ -1,0 +1,16 @@
+PR	Priority - wartość którą widzi kernel działającego
+	procesu w danym momencie
+NI	Nice - użytkownik może modyfikować w przedziale <-20;19>
+	z czego root może w ujemnych a zwykły użytkownik <0;19>.
+	Im niższa wartość NI tym wyższy priorytet
+
+nice	stosować przed uruchomieniem programu (wartość 10 jako domyślna)
+nice -n 10 ./program	ustawienie NI na 10
+
+renice -n 2 -p [PID]	zmiana wartości nice na 2 dla uruchomionego procesu
+renice -n 2 -u [USER]	zmiana wartości nice na 2 dla wszystkich
+			uruchomionych procesów użytkownika
+
+Naprawienie deamon'a w dockerze
+sudo usermod -aG ${USER}
+su - ${USER}

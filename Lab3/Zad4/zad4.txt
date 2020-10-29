@@ -1,0 +1,13 @@
+mknod potok p
+cat > potok	zapisywanie do potoku
+cat < potok	zczytywanie z potoku
+
+Wpisując dane do któregoś z potoków dane te wypływają na jednym
+z dwóch terminali (losowo - mieszją się).
+
+Zamknięcie potoku do wprowadzania danych zamyka możliwość
+wyświetlenia tych danych.
+
+Zamknięcie potoku do odczytywania danych nie zamyka możliwości
+wprowadzania danych. Jednak przy próbie wprowadzenia potok
+się zamyka.

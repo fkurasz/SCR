@@ -1,0 +1,9 @@
+SIGINT		przerwanie z klawiatury		(wyjście z procesu)
+SIGQUIT		opuścić z klawiatury		(wyjście zrzut pamięci)
+SIGFPE		wyjątek zmiennoprzecinkowy	(Błąd w obliczeniach
+			zmiennoprzecinkowych zrzut pamięci)
+SIGILL		nielegalna instrukcja		(Błędna instrukcja
+			zrzut pamięci)
+
+Po uwzględnieniu przechwytywania sygnałów (trap) proces stał się na nie
+odporny. Jednak nadal można go zabić za pomocą sygnału SIGKILL.

@@ -1,0 +1,19 @@
+
+	-f	Cały full-format listowania. Kiedy używasz z -L NLWP (liczba wątków)
+		i LWP (ID wątku) zostaną dodane w kolumnie.
+
+	-l	BSD Dlugi format. Opcja -y jest często przydatna z tym.
+
+	-u	Wybierz według efektywnego identyfikatora użykownika (EUID) lub nazwy. 
+		Wybiera procesy których efektywna nazwa użytkownika lub ID jest na 
+		liście użytkowników. Efektywny identyfikator użytkownika opisuje użytkownika,
+		którego prawa dostępu do plików są używane przez proces.
+
+	-t	Wybierz według tty. Spowoduje to wybranie procesów skojarzonych z terminalami
+		podanymi w ttylist.
+
+	-p	Wybierz przez ID procesu. Wybiera procesy których ID pojawia się w pidlist.
+
+
+	pgrep geany	Zwraca PID uruchomionej aplikacji
+	pgrep sshd	

@@ -1,0 +1,22 @@
+filip@filip-ubuntu:~$ gedit&
+[1] 61141
+filip@filip-ubuntu:~$ ps
+    PID TTY          TIME CMD
+  53936 pts/0    00:00:00 bash
+  61141 pts/0    00:00:00 gedit
+  61159 pts/0    00:00:00 ps
+filip@filip-ubuntu:~$ kill -s SIGSTOP 61141
+filip@filip-ubuntu:~$ ps
+    PID TTY          TIME CMD
+  53936 pts/0    00:00:00 bash
+  61141 pts/0    00:00:00 gedit
+  61161 pts/0    00:00:00 ps
+
+[1]+  Zatrzymano              gedit
+filip@filip-ubuntu:~$ kill -s SIGCONT 61141
+filip@filip-ubuntu:~$ ps
+    PID TTY          TIME CMD
+  53936 pts/0    00:00:00 bash
+  61141 pts/0    00:00:00 gedit
+  61175 pts/0    00:00:00 ps
+filip@filip-ubuntu:~$ 

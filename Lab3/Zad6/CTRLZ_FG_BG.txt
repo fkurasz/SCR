@@ -1,0 +1,13 @@
+Ctrl+Z	wstrzymuje proces
+fg	(pierwszy plan) służy do wznawiania programów wstrzymanych
+	w pierwszym tle. Polecenie to jeśli zostanie wywołane bez parametrów,
+	wznowi działanie ostatnio wstrzymanego procesu. Aby wznowić działanie
+	określonego procesu, należy podać jego identyfikator jako parametr
+	komendy. 
+		
+bg	(tło) służy do wznawiania w tle procesów wstrzymanych. Polecenie to
+	jeśli zostanie wywołane bez parametrów, wznowi działanie ostatnio
+	wstrzymanego procesu. Aby wznowić działanie określonego procesu,
+	należy podać jego identyfikator jako parametr komendy. 
+	
+SIGCONT	wznawia proces tak jak bg
