@@ -1,2 +1,2 @@
-brak
+sh skrypt.sh | grep 1 | cat > potok
 
