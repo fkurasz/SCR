@@ -11,6 +11,4 @@ renice -n 2 -p [PID]	zmiana wartości nice na 2 dla uruchomionego procesu
 renice -n 2 -u [USER]	zmiana wartości nice na 2 dla wszystkich
 			uruchomionych procesów użytkownika
 
-Naprawienie deamon'a w dockerze
-sudo usermod -aG ${USER}
-su - ${USER}
+docker exec -it [adres kontenera] /bin/bash
