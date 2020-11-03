@@ -1,3 +1,13 @@
-ulimit -u 	47229
+ulimit -u	47229
 		Ustawienie na małą wartość powoduje błąd.
 		bash: fork: retry: Zasoby chwilowo niedostępne
+
+TERMINAL 0
+		sh skrypt.sh	uruchomienie skryptu
+		ps -a		pokazanie procesów		
+
+TERMINAL 1
+		ps -t 0		pokazanie procesów na terminalu 0
+		killall sh	zabiecie wszystkich procesow sh
+
+Terminal 0 CTRL+C i terminal 0 wraca do normy
