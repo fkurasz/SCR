@@ -1,0 +1,26 @@
+man proc 	Jest to wirtualny system plików, który pozwala na komunikacje z jądrem systemu
+		przez interfejs. Wystepuje to tylko i wylacznie w pamieci operacyjnej 
+		komputera. Montowant w katalogu /proc.
+		Zazwyczaj jego zawartosc jest generowana automatycznie, reprezentuje stan w 
+		chwili odczytu. Pozwala odczytać dane o procesach, każdy z nich ma swoj 
+		wlasny PID, zapisywac dane, zmieniac je lecz nie wszystkie. Dzięki formie txt 
+		mozna odczytac za pomoca narzedzi cat, grep lub innym narzedziem tekstowym.
+
+
+df -ah		raportuje użycie miejsca na dysku w systemie plików -a wszystkie (pseudo,
+		zduplikowanem niedostepne systemy plików) -h czytelne dla czlowieka
+
+
+katalogi zawierające tylko cyfry w nazwach - każdy odpowiada jakiemuś procesowi aktualnie 
+		działającemu w systemie (nazwa katalogu to pid procesu). 
+		W tych katalogach mamy między innymi:
+	cmdline - zawiera pełną linię komend procesu
+	cwd - (skrót od current working directory), jest to link do aktualnego katalogu 
+		roboczego procesu
+	environ - zawiera zmienne środowiskowe procesu
+	exe - link do pliku zawierającego uruchomiony program
+	fd - katalog zawierający linki do otwartych przez proces plików, ich nazwy to numerki 
+		deskryptorów (należy pamiętać, że deskryptorom nie zawsze przypisany jest plik,
+		 może być no pipe)
+	maps - zawiera zmapowane obecnie regiony pamięci oraz prawa dostępu do nich
+	stat - status procesu (wykorzystywane przez program ps)

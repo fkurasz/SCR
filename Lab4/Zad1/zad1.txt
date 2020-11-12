@@ -1,0 +1,7 @@
+1. uruchomic program pn 	=> ./pn
+2. pokazac programu w top	=> top -d .1
+3. zabicie procesu 		=> Ctrl+C
+4. uruchomic program po		=> ./po
+5. pokazac program w top	=> top -d .1
+
+odp. nalezalo dodac -d z paramterem czasowym w sekundach
