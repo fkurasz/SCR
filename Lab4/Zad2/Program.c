@@ -6,25 +6,29 @@
 
 int c = 0;
 
-void sig_handler_A(int sig){
+void sig_handler_A(int sig)
+{
   if(sig == SIGALRM)
   printf("Sygnal SIGALRM\n");
   exit(0);
 }
 
-void sig_handler_B(int sig){
+void sig_handler_B(int sig)
+{
   printf("Sygnal SIGTERM\n");
 }
 
 
-void sig_handler_C(int sig){
+void sig_handler_C(int sig)
+{
   printf("Sygnal SIGUSR1\nWstrzymanie odbierania sygnalu na 1000 iteracji\n");
   c = 1000;
   signal(sig, SIG_IGN);
 }
 
 
-void sig_handler_D(int sig){
+void sig_handler_D(int sig)
+{
   printf("Sygnal SIGUSR2\nCalkowite ignorowanie sygnalu\n");
   signal(SIGUSR2, SIG_IGN);
 }
