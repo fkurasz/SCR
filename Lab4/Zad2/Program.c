@@ -18,7 +18,7 @@ void sig_handler_B(int sig){
 
 
 void sig_handler_C(int sig){
-  printf("Sygnal SIGUSR1\nWstrzymanie oderania sygnalu na 1000 iteracji\n");
+  printf("Sygnal SIGUSR1\nWstrzymanie odbierania sygnalu na 1000 iteracji\n");
   c = 1000;
   signal(sig, SIG_IGN);
 }
