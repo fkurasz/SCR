@@ -1,0 +1,4 @@
+1.Informacja dotyczaca odczytania pliku w programie.
+2.Kolejne zdanie.
+3.Informacja koncowa. Tutaj nastepuje koniec.
+4.Koniec
