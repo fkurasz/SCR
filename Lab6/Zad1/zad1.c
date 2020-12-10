@@ -43,7 +43,7 @@ int main()
 		else
 		{
 			//dlugosc plikow
-            fstat(file, &stat_struct);
+            		fstat(file, &stat_struct);
 			f_length = stat_struct.st_size;
 			fstat(fmap, &stat_struct);
 			length = stat_struct.st_size;
