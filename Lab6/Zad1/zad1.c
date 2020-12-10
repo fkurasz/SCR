@@ -14,9 +14,11 @@ int fmap;
 //struktur rozmiaru pliku
 struct stat stat_struct;
 
-//length - dlugosc mapowanego pliku
-//f_length - dlugosc pliku czytanego
-int length, f_length;
+//dlugosc mapowanego pliku
+int length;
+//dlugosc pliku czytanego
+int f_length;
+
 char f_name[100];
 char bufor[1];
 char *ptr_memory;
@@ -26,7 +28,7 @@ int main()
 	//otwarcie pliku do mapowania
 	if((fmap=open("shared_memory.txt",O_RDWR)) <= 0)
 	{
-		fprintf(stderr, " Blad otwarcia dzielonego pliku\n");
+		fprintf(stderr, "Blad otwarcia dzielonego pliku\n");
 	}
 	while(1)
 	{
@@ -60,13 +62,13 @@ int main()
 				ftruncate(fmap, stat_struct.st_size + f_length);
 				ptr_memory = mmap(NULL, stat_struct.st_size + f_length, PROT_READ | PROT_WRITE, MAP_SHARED, fmap, 0);
 
-                int i = 0;
+                		int i = 0;
 				//wpisanie do wspodzielonego pliku
 				while(read(file,bufor,1) > 0)
 				{
 					ptr_memory[length + i] = bufor[0];
-                    i++;
-                }
+                    			i++;
+               			}
 				printf("Koniec mapowania\n");
 			}
 			close(file);
