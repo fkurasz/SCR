@@ -58,6 +58,8 @@ int main()
 				else if(stat_struct.st_size > 0)
 				{
 					//mapowanie
+					
+					//przyciecie do odpowiedniego rozmiaru
 					ftruncate(fmap, stat_struct.st_size);
 
 					//bez tego nie ma gwarancji ze zmiany zostana zapisane przed wywolaniem munmap()
@@ -78,7 +80,7 @@ int main()
 	{
 		//0.1s
 		usleep(100000);
-        execlp("display", "display", "-update", "1", "shared_memory.txt", NULL);
+        	execlp("display", "display", "-update", "1", "shared_memory.txt", NULL);
 	}
 	else
 	{
