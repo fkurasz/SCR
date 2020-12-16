@@ -1,0 +1,92 @@
+﻿DESKRYPTOR PLIKU:	Liczba całkowita, czyli wartość typu int.
+			Domyślnie każdy proces po uruchomieniu ma otwarte 3
+			standardowe deskryptory plików.
+			0 STDIN		cin
+			1 STDOUT	cout
+			2 STDERR	cerr
+
+FUNKCJE:
+###############################################
+OPEN
+int open(const char *pathname, int flags, mode_t mode);
+
+	Otwiera plik określony przez ścieżkę. Jest deskryptorem pliku. 
+
+###############################################
+CLOSE
+int close(int fd);
+	
+	Zamyka deskryptor tak że plik juz nie jest dostępny
+
+###############################################
+FORK
+pid_t fork (void);
+
+	Tworzy nowy proces, powielając proces wywołujący. Pid == 0 dziecko 
+	Pid>0 rodzic
+
+###############################################
+MMAP
+void * mmap (void * addr , size_t length , int prot , int flags , 
+                  int fd , off_t offset );
+
+	Zwraca adres do obszaru pamięci na dysku na którym są nasze
+	zapisane rzeczy.
+
+###############################################
+MUNMAP
+int munmap (void * addr , size_t length );
+	
+	Usuwa ten adres pamieci który był mapowany.
+
+###############################################
+FSTAT
+int fstat(int fd, struct stat *statbuf);
+
+	Pobiera informacje o pliku do struktury. Wraz z deskryptorem.
+	
+struct stat nazwa_struktury
+
+###############################################
+FTRUNCATE
+
+int ftruncate(int fd, off_t length);
+
+	Skraca plik do określonej długości
+
+###############################################
+READ
+ssize_t read(int fd, void *buf, size_t count);
+
+	Czyta do count bajtów z deskryptora pliku fd do bufora, zaczynając
+	 od buf.
+
+
+
+###############################################
+WRITE
+ssize_t write(int fd, const void *buf, size_t count);
+
+	Zapisuje z liczby bajtów z bufora, zaczynając od buf do plik,
+	do którego odwołuje się deskryptor pliku fd.
+
+###############################################
+EXECLP
+int execlp(const char *file, const char *arg, ...
+                       /* (char  *) NULL */);
+
+	Wykonuje zadanie powłokowe.
+Np. execlp("display","display"...)
+
+###############################################
+MEMCNTL !!! U MNIE NIE DZIALA 
+int memcntl(caddr_t addr, size_t len, int cmd, caddr_t arg, int attr, int mask);
+
+	Funkcja umożliwia procesowi wywołującemu zastosowanie różnych operacji sterujących w przestrzeni adresowej zidentyfikowanej przez mapowania ustawione dla zakresu adresów. [addr, addr+len]
+
+###############################################
+MSYNC
+int msync(void* addt, size_t length, int flags);
+
+	Opróżnia zmiany wprowadzone w wewnętrznej kopii pliku, które były mapowane do pamięci przy użyciu mmap() z powrotem do systemu plików. Bez użycia tego wywołąnia, nie ma gwarancji, że zmiany zostaną zapisane przed wywołaniem munmap(). Dokładniej: część pliku który odpowiada obszarowi pamięci zaczynającemu się od addr i mając długość length jest aktualizowana.
+
