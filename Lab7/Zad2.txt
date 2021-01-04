@@ -1,0 +1,2 @@
+Zadania w wątkach wykonywane są losowo ponieważ działają w tym samym czasie,
+wykonują to samo zadanie oraz mają ten sam priotytet.

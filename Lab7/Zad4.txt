@@ -1,0 +1,4 @@
+Program kończy się zanim wszystkie wątki wykonają swoje zadanie dlatego nie
+jesteśmy w stanie ich zauważyć.
+Aby rozwiązać problem należy umieścić funkcje pthread_exit(NULL) na końcu
+main'a. Funkcja czeka na wykonanie wszystkich wątków przed zakończeniem main'a.

@@ -1,0 +1,13 @@
+W hello_arg1.c
+W funkcji tworzącej wątek
+pthread_create(&threads[t], NULL, PrintHello, (void *) taskids[t]);
+jako ostatni argument jest argument funkcji wykonującej się w wątku czyli
+jest to argument funkcji PrintHello.
+
+W hello_arg2.c
+Argumenty funkcji przekazywane przez strukture przekazywane są przez adres.
+Wysyłana jest cała struktura w orygniale. 
+
+W bug3.c
+Problemem bylo zbyt zlozone rzutowanie w linicje 19 oraz wysylanie adresu "t"
+w 32 linii. 

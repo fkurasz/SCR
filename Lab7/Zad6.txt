@@ -1,0 +1,2 @@
+Stack jest za mały dlatego należy albo zwiększyć stack albo
+zmiejszyć tablicę tak aby mogła być pomieszczona w stacku.

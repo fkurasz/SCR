@@ -1,0 +1,5 @@
+Aby program zwracal różne wartości zmiennej Result należy na przykład dodać
+mnożenie przez zmienna tid.
+
+Różnica polega na atrybucie. Joinable pozwala na dodanie wątków do kolejki
+w której wątki wykonywane są jeden po drugim.
