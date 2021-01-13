@@ -3,3 +3,4 @@ mnożenie przez zmienna tid.
 
 Różnica polega na atrybucie. Joinable pozwala na dodanie wątków do kolejki
 w której wątki wykonywane są jeden po drugim.
+Drugi program detached.c wykonuje wątki losowo.
